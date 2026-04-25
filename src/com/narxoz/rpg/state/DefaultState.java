@@ -3,10 +3,6 @@ package com.narxoz.rpg.state;
 import com.narxoz.rpg.combatant.Hero;
 
 public class DefaultState implements HeroState{
-    private static final DefaultState instance = new DefaultState();
-    public static HeroState getInstance(){
-        return instance;
-    }
     @Override
     public String getName() {
         return "Default State";

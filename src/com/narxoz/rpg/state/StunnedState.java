@@ -5,7 +5,7 @@ import com.narxoz.rpg.combatant.Hero;
 public class StunnedState implements HeroState{
     @Override
     public String getName() {
-        return "Default State";
+        return "Stunned State";
     }
 
     @Override
@@ -25,7 +25,7 @@ public class StunnedState implements HeroState{
 
     @Override
     public void onTurnEnd(Hero hero) {
-        hero.setState(DefaultState.getInstance());
+        hero.setState(StateFactory.createHeroState(StateType.DEFAULT));
     }
 
     @Override

@@ -33,7 +33,7 @@ public class PoisonedState implements HeroState{
     public void onTurnEnd(Hero hero) {
         turnsLeft--;
         if (turnsLeft == 0) {
-            hero.setState(DefaultState.getInstance());
+            hero.setState(StateFactory.createHeroState(StateType.DEFAULT));
         }
     }
 
