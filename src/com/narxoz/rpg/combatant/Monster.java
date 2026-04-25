@@ -29,14 +29,4 @@ public class Monster {
     public void takeDamage(int amount) {
         hp = Math.max(0, hp - amount);
     }
-
-    /**
-     * This monster attacks a hero, dealing damage.
-     *
-     * @param hero the target hero
-     */
-    public void attack(Hero hero) {
-        int damage = Math.max(1, this.attackPower - 2); // simple formula: attack power minus small defense value
-        hero.takeDamage(damage);
-    }
 }

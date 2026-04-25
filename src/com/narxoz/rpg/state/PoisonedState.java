@@ -3,7 +3,11 @@ package com.narxoz.rpg.state;
 import com.narxoz.rpg.combatant.Hero;
 
 public class PoisonedState implements HeroState{
-    private int turnsLeft = 2;
+    private int turnsLeft;
+    private int poisonDMG = 5;
+    public PoisonedState(int turnsLeft) {
+        this.turnsLeft = turnsLeft;
+    }
     @Override
     public String getName() {
         return "Poisoned State";
@@ -21,7 +25,8 @@ public class PoisonedState implements HeroState{
 
     @Override
     public void onTurnStart(Hero hero) {
-        hero.takeDamage(5);
+        hero.takeDamage(poisonDMG);
+        System.out.println("\t►" + hero.getName() + " received " + poisonDMG + " poison damage");
     }
 
     @Override
